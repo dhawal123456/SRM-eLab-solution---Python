@@ -1,0 +1,96 @@
+#Q. 1: Sum of N series
+#Python Program to Read a number n and Compute n+nn+nnn
+
+a=int(input())
+print(a+a*a+a*a*a)
+
+#Q. 2: Display Name
+#Write a program that asks the user to enter his or her name.
+#The program should respond with a message that says hello to the user, using his or her name.
+
+a=input()
+print("Welcome",a)
+
+#Q. 3: Salary Calculator
+#Help Raja to calculate a first salary that he got from the organisation , he was confused with an salary credited in his account .
+#He asked his friend Ritu to identify how salary pay got calculated by giving the format of salary.
+#His basic pay (to be entered by user) and Ritu developed a software to calculate the salary pay,with format given as below
+#HRA=80% of the basic pay,
+#dA=40% of basic pay
+#bonus = 25 % of hra
+
+a=int(input())
+b=0.8*a
+print("Total Salary=",a+b+0.4*a+0.25*b)
+
+#Q. 4: eLab Temperature Scale
+#Write a program that begins by reading a temperature from the user in degreesCelsius.
+#Then your program should display the equivalent temperature in degrees Fahrenheit.
+#The calculations needed to convert between different units of temperature is your task
+
+a=float(input())
+b=(a*9/5)+32
+print("The fahrenheit value for",a,"celsius is",'%.2f'%b,"fahrenheit")
+
+#Q. 5: Area and Perimeter of Circle
+#Program to calculate area and perimeter of circle
+#Note:
+#Define pi as 3.14
+
+pi=3.14
+a=int(input())
+print("Area=",pi*a*a)
+print("Perimeter=",2*pi*a)
+
+#Q. 6: eLab Petrol Bunk
+#In the United States, fuel efficiency for vehicles is normally expressed in miles-pergallon (MPG).
+#In Canada, fuel efficiency is normally expressed in liters-per-hundred kilometers (L/100 km).
+#Use your research skills to determine how to convert from MPG to L/100 km.
+#Then create a program that reads a value from the user in American units and displays the equivalent fuel efficiency in Canadian units.
+#Note:
+#Formula is --> 282.48 / fuel efficiency in MPG.
+
+
+
+#Q. 7: Display the user Address
+#Write a program to read the address of a user. Display the result by breaking it into multiple lines
+#Input and Output Format:
+#Refer sample input and output for formatting specification.
+#All float values are displayed correct to 2 decimal places.
+
+a=input()
+b=input()
+c=input()
+print("Address")
+print("House Number:",a)
+print("Area:",b)
+print("Pin Code:",c)
+
+#Q. 8: Q & R
+#Python Program to read two numbers and print their quotient and remainder.
+
+a=int(input())
+b=int(input())
+print(int(a/b))
+print(a%b)
+
+#Q. 9: Display It
+#Create a program that displays your name and complete mailing address formatted in the manner that you would usually see it on the outside of an envelope.
+#Your program needs to read any input from the user
+
+a=input()
+b=input()
+c=input()
+d=input()
+print(a)
+print(b)
+print(c)
+print(d)
+
+#Q. 10: Grocery Shop
+#Write a program to display a grocery bill of the product purchased in the small market by John by getting following input from the user
+#Get the product name Get the price of the product(Price per Unit) Get the quantity of the product purchased
+#Input and Output Format:
+#Refer sample input and output for formatting specification.
+#All float values are displayed correct to 2 decimal places.
+
