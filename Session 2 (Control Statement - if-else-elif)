@@ -1,6 +1,159 @@
 #Q. 11: May to August
-#The length of a month varies from 30 and 31 days.
-#In this exercise you will create a program that reads the name of a month from the user as a string.
-#The program should get input from May to August.
-#If the input is from may to other months then display error messages as "Invalid"
+#The length of a month varies from 30 and 31 days. In this exercise you will create a program that reads the name of a month from the user as a string.
+#The program should get input from May to August. If the input is from may to other months then display error messages as "Invalid"
 
+a=input()
+if(a=="May"):
+	print(31)
+elif(a=="Jun"):
+	print(30)
+elif(a=="Jul"):
+	print(31)
+elif(a=="Aug"):
+	print(30)
+else:
+	print("Invalid")
+
+#Q. 12: Find Year
+#Most years have 365 days. However, the time required for the Earth to orbit the Sun is actually slightly more than that. As a result, an extra day, February 29, is included in 
+#some years to correct for this difference. Such years are referred to as leap years. The rules for determining whether or not a year is a leap year follow:
+#Any year that is divisible by 400 is a leap year.
+#Of the remaining years, any year that is divisible by 100 is not a leap year.
+#Of the remaining years, any year that is divisible by 4 is a leap year.
+#All other years are not leap years.
+#Write a program that reads a year from the user and displays a message indicating whether or not it is a leap year.
+
+a=int(input())
+if(a%400==0):
+  print(a,"is a leap year")
+elif(a%100==0):
+  print(a,"is not a leap year")
+elif(a%4==0):
+  print(a,"is a leap year")
+else:
+  print(a,"is not a leap year")
+
+#Q. 13: BMI
+#Write a python program to find someone will have a risk of heart Disease using BMI and age .
+#AGE BMI RISK
+#<45 <22 Low
+#>45 <22 Medium
+#<45 >22 Medium
+#>=45 >=22 High
+
+a=int(input())
+b=int(input())
+if(a<45 and b<22):
+  print("Low")
+if(a>45 and b<22):
+  print("Medium")
+if(a<45 and b>22):
+  print("Medium")
+if(a>=45 and b>=22):
+  print("High")
+	
+#Q. 14: Game of Digits
+#Develop a program that reads a four-digit integer from the user and displays the sum of the digits in the number. For example, if the user enters 3141 then your program should 
+#display 3+1+4+1=9.
+
+a=int(input())
+c=0
+while(a>0):
+  b=a%10
+  c+=b
+  a=int(a/10)
+print("The total sum of digits is:",c)
+
+#Q. 15: Combinations
+#Python Program to Accept Three Digits and Print all Possible Combinations from the Digits.
+
+a=int(input())
+b=int(input())
+c=int(input())
+d=[]
+d.append(a)
+d.append(b)
+d.append(c)
+for i in d:
+  for j in d:
+    for k in d:
+      if(i!=j and i!=k and j!=k):
+        print(i,j,k)
+
+#Q. 16: Note To Frequency - D NOTE
+#The following table lists an octave of music notes, beginning with middle D, along with their frequencies.
+#Note Frequency (Hz) D4 293.66 Begin by writing a program that reads the name of a note from the user and displays the notes frequency.
+#Your program should support all of the notes listed previously. Once you have your program working correctly for the notes listed previously you should add support for all of 
+#the notes from D0 to D8.
+#While this could be done by adding many additional cases to your if statement, such a solution is cumbersome, inelegant and unacceptable for the purposes of this exercise.
+#Instead, you should exploit the relationship between notes in adjacent octaves. In particular, the frequency of any note in octave n is half the frequency of the corresponding 
+#note in octave n+1.
+#By using this relationship, you should be able to add support for the additional notes without adding additional cases to your if statement.
+
+a=input()
+b=int(a[1])
+f=293.66
+f=f/2**(4-b)
+print(f)
+
+#Q. 17: Name that Triangle
+#A triangle can be classified based on the lengths of its sides as equilateral, isosceles or scalene.
+#All 3 sides of an equilateral triangle have the same length.
+#An isosceles triangle has two sides that are the same length, and a third side that is a different length.
+#If all of the sides have different lengths then the triangle is scalene.
+#Write a program that reads the lengths of 3 sides of a triangle from the user. Display a message indicating the type of the triangle.
+
+a=int(input())
+b=int(input())
+c=int(input())
+if(a==b==c):
+  print("equilateral")
+elif(a==b or a==c or b==c):
+  print("isosceles")
+else:
+  print("scalene")
+
+#Q. 18: India National Holidays
+#Date to Holiday Name
+#India has three national holidays which fall on the same dates each year.
+#Holiday Date
+#New Year January 1
+#Independence Day August 15
+#Republic DayJanuary 26
+#Write a program that reads a month and day from the user. If the month and day match one of the holidays listed previously then your program should display the holidays name.
+#Otherwise your program should indicate that the entered month and day do not correspond to a fixed-date holiday.
+
+a=input()
+b=int(input())
+if(a=="January" and b==1):
+  print("New Year")
+elif(a=="August" and b==15):
+  print("Independence Day")
+elif(a=="January" and b==26):
+  print("Republic Day")
+else:
+  print("Sorry No National Holidays")
+
+#Q. 19: Ph Level
+#Write a Python Program to identify Ph Level Name using the following condition.
+#Ph <7.0 acidic
+#Ph>7.0 basic
+#Ph=0 neutral
+
+a=int(input())
+if(a<7):
+  print("acidic")
+elif(a>7):
+  print("basic")
+elif(a==7):
+  print("neutral")
+
+#Q. 20: Ends with
+#Write a program to check whether the entered string ends with the character that user entered
+
+a=input()
+b=input()
+if(b==a[-1]):
+  print("YES")
+else:
+  print("NO")
