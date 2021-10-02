@@ -1,0 +1,122 @@
+#Q. 31: Longest word in a string
+#Longest word is determined based on the number of characters in the word.
+#Use lists to maintain the length of each word in the string and find the longest word.
+
+a=input()
+b=a.split()
+c=0
+for i in b:
+  if(len(i)>c):
+    c=len(i)
+    d=i
+print(d)
+
+#Q. 32: Count High and Low
+#Write a Python to check whether the given string is palindrome or not
+
+a=input()
+b="".join(reversed(a))
+if(a==b):
+  print("The string is a palindrome")
+else:
+  print("The string is not a palindrome")
+
+#Q. 33: Words and Characters
+#Write a Python program to count the number of words and characters in a given string
+
+a=input()
+b=a.split()
+c=len(b)
+d=0
+for i in a:
+  d+=1
+print(c)
+print(d)
+
+#Q. 34: Remove Vowels
+#Write a program that accepts a string and redisplays the same string after removing vowels from it.
+
+a=input()
+b=['a','e','i','o','u']
+c=""
+for i in a:
+  if(i not in b):
+    c+=i
+print(c)
+
+#Q. 35: Who is Bigger here
+#Write a Python program to count the number of Upper-case letters in the entered string.
+
+a=input()
+b=0
+for i in a:
+  if(i>='A' and i<='Z'):
+    b+=1
+print(b)
+
+#Q. 36: Check the Functions
+#Write a program to check whether the given string contains the following:
+#1. input.isalpha() = check if all char in the string are alphabetic
+#2. input.isdigit() = test if string contains digits
+#3. input.istitle() = test if string contains title words
+#4. input.isupper() = test if string contains upper case
+#5. input.islower() = test if string contains lower case
+
+a=input()
+print(a.isalpha())
+print(a.isdigit())
+print(a.istitle())
+print(a.isupper())
+print(a.islower())
+
+#Q. 37: Count it
+#Write a Python program to count the number of entered words in a given string
+
+a=input().split()
+b=input()
+c=0
+for i in a:
+  if(i==b):
+    c+=1
+print(c)
+
+#Q. 38: Numbers, Alphabets and Spaces
+#Write a Python program to count the numbers, alphabets and spaces in the entered string.
+
+a=input()
+b=0
+c=0
+d=0
+for i in a:
+  if(i>='A' and i<='Z' or i>='a' and i<='z'):
+    c+=1
+  elif(i>='0' and i<='9'):
+    b+=1
+  elif(i==" "):
+    d+=1
+print(b)
+print(c)
+print(d)
+
+#Q. 39: Hypen
+#Write a python program to remove add "Hypen" character in the entered string
+
+a=input()
+b=""
+for i in a:
+  if(i==" "):
+    b+="-"
+  else:
+    b+=i
+print(b)
+
+Q. 40: Length Without Library
+QUESTION DESCRIPTION
+
+Write a python program to find the length of the given string without using Library Function
+
+a=input()
+b=0
+for i in a:
+  b+=1
+print(b)
