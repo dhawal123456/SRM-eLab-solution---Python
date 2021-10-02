@@ -1,0 +1,128 @@
+#Q. 21: Positive Odd
+#Write a program to find the sum of positive odd numbers
+#Input:Positive and negative numbers
+#Output:Display Sum of positive odd numbers.
+#Refer sample input and output for formatting specification.
+
+a=int(input())
+c=[]
+d=0
+for i in range(a):
+  b=int(input())
+  c.append(b)
+for i in c:
+  if(i>0 and i%2!=0):
+    d+=i
+print("Sum of positive odd numbers:",d)
+
+#Q. 22: Number of digits
+#Write a program to find the number of digits in the given number
+
+a=int(input())
+b=0
+while(int(a)>0):
+  a/=10
+  b+=1
+print(b)
+
+#Q. 23: Remove special
+#Write a program to remove the special characters form the given text
+
+a=input()
+b=""
+for i in a:
+  if(i>='A' and i<='Z' or i>='a' and i<='z' or i==' ' or i>='0' and i<='9'):
+    b+=i
+print(b)
+
+#Q. 24: Factorial
+#Write a program to find the factorial for the given number
+
+a=int(input())
+b=1
+if(a<0):
+  print("Sorry,factorial does not exist for negative numbers")
+else:
+  for i in range(1,a+1):
+    b*=i
+  print(b)
+
+#Q. 25: Exponentation-Part A
+#Write a program to find the exponentation of given number
+#Input 1: Number of terms
+#Input 2: Base
+
+a=int(input())
+b=int(input())
+print("The total terms is:",a)
+for i in range(a):
+  print(b**i)
+
+#Q. 26: LCM PART
+#Write a program to find the Least common divisor of the given numbers
+#Input 1: Positive number
+#Input 2: Positive number
+
+a=int(input())
+b=int(input())
+for i in range(1,a*b):
+  if(i%a==0 and i%b==0):
+    print(i)
+    break
+
+#Q. 27: Multiplication Table
+#Write a program to print the multiplication table for the given Number
+#Input 1:Positive number
+
+a=int(input())
+for i in range(1,a):
+  print(a,"*",i,"=",a*i)
+
+#Q. 28: Bigger Even
+#Write a program to find the biggest even number from the given input
+#Input:Positive numbers
+
+a=int(input())
+c=0
+for i in range(a):
+  b=int(input())
+  if(b%2==0 and b>c):
+    c=b
+print("Largest even number:",c)
+
+#Q. 29: Sum of Even and Odd
+#Write a program to calculate the sum of even and odd numbers including its count.
+#Input:
+#1.Total number of Inputs
+#2. Input elements
+
+a=int(input())
+c=0
+d=0
+e=0
+f=0
+for i in range(a):
+  b=int(input())
+  if(b%2==0):
+    c+=1
+    d+=b
+  else:
+    e+=1
+    f+=b
+print(e)
+print(c)
+print(d)
+print(f)
+
+#Q. 30: Sum on n number
+#Write a program to find the sum of numbers
+#Input 1:Negative number
+
+a=int(input())
+b=0
+if(a<0):
+  print("Enter a positive number")
+else:
+  for i in range(a+1):
+    b+=i
+  print("The sum is",b)
