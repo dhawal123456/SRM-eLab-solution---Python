@@ -1,0 +1,131 @@
+#Q. 61: Seasoners
+#The year is divided into four seasons: spring, summer, fall and winter. While the exact dates that the seasons change vary a little bit from year to year because of the way 
+#that the calendar is constructed, we will use the following dates for this exercise:
+#Season First day
+#Summer March 20
+#Spring June 21
+#Fall September 22
+#Winter December 21
+#Create a program that reads a month and day from the user. The user will enter the name of the month as a string, followed by the day within the month as an integer.
+#Then your program should display the season associated with the date that was entered.
+#Note: Enter First three letter for month example: Jan for january, Feb for Feburary ans so on....and first letter of the month should be capital
+
+a,b=input(),int(input())
+if(a=='Mar' and b==20):
+  print("Summer")
+if(a=='Jun' and b==21):
+  print("Spring")
+if(a=='Sep' and b==22):
+  print("Fall")
+if(a=='Dec' and b==21):
+  print("Winter")
+
+#Q. 62: Max Sum without Adjacents
+#Given an array of positive numbers, find the maximum sum of a subsequence with the constraint that no 2 numbers in the sequence should be adjacent in the array. So 3 2 7 10 
+#should return 13 (sum of 3 and 10) or 3 2 5 10 7 should return 15 (sum of 3, 5 and 7).
+
+import sys
+def a(b,c,d,e=-sys.maxsize):
+  if(c==d):
+    return(0)
+  f=0
+  if((e+1)!=c):
+    f=a(b,c+1,d,c)+b[c]
+  return(max(f,a(b,c+1,d,e)))
+g=int(input())
+for i in range(g):
+  h=int(input())
+  j=list(map(int,input().split()))
+  print(a(j,0,len(j)))
+
+#Q. 63: Transpose of Matrix
+#Write a python program to create a NESTED LIST and print the diagonal elements of the matrix
+#Hint:
+#1. Input the number of rows First Matrix
+#2. Input the number of Columns for first Matrix
+#3. Display the elements of the matrix
+#4. Display the transpose of the matrix
+
+a,b,c=int(input()),int(input()),[]
+for i in range(a):
+  d=[]
+  for j in range(b):
+    d.append(int(input()))
+  c.append(d)
+e = [[c[j][i] for j in range(len(c))] for i in range(len(c[0]))]
+print("Given Matrix")
+for i in c:
+  print(i)
+print("Transpose of the matrix")
+for i in e:
+   print(i)
+
+#Q. 64: Spirally traversing a matrix
+#Traverse a 4x4 matrix of integers in spiral form.
+
+a=int(input())
+def c(d):
+  A,e,f,g,h=[],0,0,len(d)-1,len(d[0])-1
+  while True:
+    if(f>h):
+      break
+    for i in range(f,h+1):
+      A.append(d[e][i])
+    e+=1
+    if(e>g):
+      break
+    for i in range(e,g+1):
+      A.append(d[i][h])
+    h-=1
+    if(f>h):
+      break
+    for i in range(h,f-1,-1):
+      A.append(d[g][i])
+    g-=1
+    if(e>g):
+      break
+    for i in range(g,e-1,-1):
+      A.append(d[i][f])
+    f+=1
+  print(A)
+for i in range(a):
+  b=[] 
+  for j in range(4):
+    b.append([int(j) for j in input().split()])
+  c(b)
+
+#Q. 65: Maximum sum Rectangle
+#Given a 2D array, find the maximum sum subarray in it. For example, in the following 2D array, the maximum sum subarray is highlighted with blue rectangle and sum of this 
+#subarray is 29.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
