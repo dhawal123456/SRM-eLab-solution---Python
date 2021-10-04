@@ -50,7 +50,9 @@ print("Perimeter=",2*pi*a)
 #Note:
 #Formula is --> 282.48 / fuel efficiency in MPG.
 
-
+a=int(input())
+b=282.48/a
+print(round(b,2))
 
 #Q. 7: Display the user Address
 #Write a program to read the address of a user. Display the result by breaking it into multiple lines
@@ -94,3 +96,9 @@ print(d)
 #Refer sample input and output for formatting specification.
 #All float values are displayed correct to 2 decimal places.
 
+a,b,c=input(),float(input()),int(input())
+print("Product Details")
+print(a)
+print(b)
+print(c)
+print("Bill:",round((b*c),2))
