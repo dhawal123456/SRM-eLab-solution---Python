@@ -1,0 +1,138 @@
+#Q. 81: Quick Sort
+#Write a program to perform Quick Sorting
+
+def c(d,e,f):
+  g=d 
+  h=f[g]
+  while(d<e):
+    while(d<len(f) and f[d]<=h):
+      d+=1
+    while(f[e]>h):
+      e-=1
+    if(d<e):
+      f[d],f[e]=f[e],f[d]
+  f[e],f[g]=f[g],f[e]
+  return e
+def j(d,e,f):
+  if(d<e):
+    p=c(d,e,f)
+    j(d,p-1,f)
+    j(p+1,e,f)
+a,b=int(input()),[]
+for i in range(a):
+  b.append(int(input()))
+j(0,a-1,b)
+print(*b,sep="\n")
+
+#Q. 82: Smallest and Largest Integer
+#Sort the given set of integers using bubble sort and find the smallest and largest among given set of integers.
+#Step1: Get the number of integers
+#Step 2:Receive the integers
+#Step3:Sort the integers using bubble sort
+#Step 4:Print the smallest and largest
+
+def c(d):
+  for i in range(len(d)):
+    for j in range(0,len(d)-i-1):
+      if(d[j]>d[j+1]):
+        d[j],d[j+1]=d[j+1],d[j]
+a,b=int(input()),[]
+for i in range(a):
+  b.append(int(input()))
+c(b)
+print(b[0],b[-1])
+
+#Q. 83: Selection Sort -1
+#Sort the given set of numbers using Selection Sort. The first line of the input contains the number of elements, the second line of the input contains the numbers to be sorted.
+#In the output print the status of the array of all iteration and the final sorted array in the given format
+
+a,b=int(input()),[]
+for i in range(a):
+  b.append(int(input()))
+print(*b)
+for i in range(a-1):
+  c=i
+  for j in range(i+1,a):
+    if(b[c]>b[j]):
+      c=j
+  b[i],b[c]=b[c],b[i]
+  print(*b)
+print("Sorted Array:")
+print(*b)
+
+#Q. 84: Find Mid-term With ODD and Even length of list
+#Perform sorting on list of integers and print the mid-term.
+
+a,b=int(input()),[]
+for i in range(a):
+  b.append(int(input()))
+b.sort()
+print("Sorted List:")
+print(b)
+print("Mid-term:")
+print(b[int((a+1)/2)-1])
+
+#Q. 85: Searching - 2
+#Given an array of distinct elements, sort the elements and find the third largest element in it.
+#Take the number of elements and the array as input.
+
+a,b=int(input()),[]
+for i in range(a):
+  b.append(int(input()))
+b.sort()
+print(b[2])
+
+#Q. 86: Find prime numbers
+#Perform Linear search and find the prime numbers
+
+a,b,c=int(input()),list(map(int,input().split())),[]
+for i in range(a):
+  d=0
+  for j in range(1,b[i]+1):
+    if(b[i]%j==0):
+      d+=1
+  if(d==2):
+    c.append(int(b[i]))
+if(len(c)!=0):
+  print(c)
+else:
+  print("No Primes")
+  
+#Q. 87: Searching Linear
+#Write a program to search a element linearly
+
+a,b=int(input()),[]
+for i in range(a):
+  b.append(int(input()))
+c=int(input())
+for i in range(a):
+  if(b[i]==c):
+    print("Element is present at index",i)
+    
+#Q. 88: Merge Sort
+#Write a program to perform merge sorting.
+
+
+
+#Q. 89: Finding the multiple
+#Find the multiple of given number in the list of integers
+
+a,b=int(input()),[]
+for i in range(a):
+  b.append(int(input()))
+c=int(input())
+for i in b:
+  if(i%c==0):
+    print(i)
+    
+#Q. 90: Ordering integers in descending order
+#Sort the given set of integers using bubble sort and print from largest to smallest integer
+
+a,b=int(input()),[]
+for i in range(a):
+  b.append(int(input()))
+for i in range(a):
+  for j in range(a-i-1):
+    if(b[j]<b[j+1]):
+      b[j],b[j+1]=b[j+1],b[j]
+print(b)
