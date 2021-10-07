@@ -1,0 +1,203 @@
+#Q. 91: Create a dynamic file and read the number of lines
+#Write a python program to create a file and display the contents (dynamic number of lines)
+#Hint:
+#1. Create a File
+#2. Take the input as number of lines to be written into the file
+#3. Based on the number of lines get the input from the user
+#4. Add a new line to the file after each input.
+#5. Display the contents of the file written in the output
+#6. Display the Number of Lines in the File in the output
+
+a,b,c=input(),0,int(input())
+d=open(a,"w")
+for i in range(c):
+  d.write(input())
+  if(i<c-1):
+    d.write("\n")
+d.close()
+d=open(a,"r")
+e=d.read()
+f=e.split("\n")
+for i in f:
+  b+=1
+print(e)
+print("Number of lines:")
+print(b)
+d.close()
+
+#Q. 92: Count the words
+#Write a python program to create a file and display the contents (dynamic number of lines) and count the number of words in the file.
+#Hint:
+#1. Create a File
+#2. Take the input as number of lines to be written into the file
+#3. Based on the number of lines get the input from the user
+#4. Get the file name from the user for performing operations
+#5. Count the number of words in the file and display the number of words in the fie
+
+a,b,c=input(),0,int(input())
+d=open(a,"w")
+for i in range(c):
+  d.write(input())
+  if(i<c-1):
+    d.write("\n")
+d.close()
+d=open(a,"r")
+e=d.read().split()
+print("Number of words:")
+print(len(e))
+d.close()
+
+#Q. 93: Create a File and read
+#Write a python program to create a file and display the contents
+#Hint:
+#1. Create a File
+#2. Take four inputs from the user and add the four lines to the file
+#3. Display the contents of the file written in the output
+
+a=input()
+b=open(a,"w")
+for i in range(4):
+  b.write(input())
+b.close()
+b=open(a,"r")
+c=b.read()
+print(c)
+b.close()
+
+#Q. 94: Count Words
+#Write a python program to create a file and display the count of all the characters in the file
+#Hint:
+#1. Create a File
+#2. Take the input as number of lines to be written into the file
+#3. Based on the number of lines get the input from the user
+#4. File name to be searched
+
+a,b,e=input(),int(input()),0
+c=open(a,"w")
+for i in range(b):
+  c.write(input())
+  if(i<b-1):
+    c.write("\n")
+c.close()
+c=open(a,"r")
+d=c.read().split()
+for i in d:
+  if(i.isalpha()):
+    e+=len(i)
+print(e)
+c.close()
+
+#Q. 95: Captilize each word
+#Write a python program to create a file and Capitalise each word (Starting letter) in the file
+#Hint:
+#1. Create a File
+#2. Take the input as number of lines to be written into the file
+#3. File name to be searched
+
+a,b,c=input(),0,int(input())
+d=open(a,"w")
+for i in range(c):
+  d.write(input())
+  if(i<c-1):
+    d.write("\n")
+d.close()
+d=open(a,"r")
+for i in d:
+  e=i.title()
+  print(e)
+d.close()
+
+#Q. 96: Reverse File
+#Write a Python Program to create a file and display the content(dynamic number of lines) and print the files contents in reverse order.
+#Hint 1:
+#1. Create a file
+#2. Take the Input as number of lines to be written into the file
+#3. Based on the number of lines get the input from the user
+#4. Get the file name from the user for performing operations
+#5. Count the number of words in the file and display the number of words in the file input
+
+
+
+#Q. 97: Count Number
+#Write a python program to create a file and display the contents (dynamic number of lines) and count the numbers in the file and display the count.
+#Hint:
+#1. Create a File
+#2. Take the input as number of lines to be written into the file
+#3. Based on the number of lines get the input from the user
+#4. Input the file name to perform the operations
+
+a,b,e=input(),int(input()),0
+c=open(a,"w")
+for i in range(b):
+  c.write(input())
+  if(i<b-1):
+    c.write("\n")
+c.close()
+c=open(a,"r")
+d=c.read()
+for i in d:
+  if(i.isnumeric()):
+    e+=len(i)
+print(e)
+c.close()
+
+#Q. 98: Find the word occurrence
+#Write a python program to create a file and display the contents (dynamic number of lines) and count the occurrence of the word in the file and display the count.
+#Hint:
+#1. Create a File
+#2. Take the input as number of lines to be written into the file
+#3. Based on the number of lines get the input from the user
+#4. Get the word to be searched in the file
+#5. Display the count of the entered word in the file
+
+a,b,e=input(),int(input()),0
+c=open(a,"w")
+for i in range(b):
+  c.write(input())
+  if(i<b-1):
+    c.write("\n")
+c.close()
+f=input()
+c=open(a,"r")
+d=c.read().split()
+for i in d:
+  if(i==f):
+    e+=1
+print("Occurrences of the word")
+print(e)
+c.close()
+
+#Q. 99: Reverse File (same as Q. 96)
+#Write a python program to create a file and display the contents (dynamic number of lines) and print the files contents in reverse order.
+#Hint:
+#1. Create a File
+#2. Take the input as number of lines to be written into the file
+#3. Based on the number of lines get the input from the user
+#4. Get the file name from the user for performing operations
+#5. Count the number of words in the file and display the number of words in the fie
+
+#Q. 100: Find the letter
+#Write a python program to create a file and display the contents (dynamic number of lines) and count the occurrence of the letter in the file and display the count.
+#Hint:
+#1. Create a File
+#2. Take the input as number of lines to be written into the file
+#3. Based on the number of lines get the input from the user
+#4. Input the file name to perform the operations
+#5. Input the letter to be searched in the file
+
+a,b,e=input(),int(input()),0
+c=open(a,"w")
+for i in range(b):
+  c.write(input())
+  if(i<b-1):
+    c.write("\n")
+c.close()
+f,g=input(),input()
+c=open(a,"r")
+d=c.read()
+for i in d:
+  if(i==g):
+    e+=1
+print("Occurrences of the letter")
+print(e)
+c.close()
